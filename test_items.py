@@ -1,16 +1,13 @@
-#####test_items.py#####
-
+#test_items.py
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 
 class TestMainPage:
 
-    def test_of_page(self, browser, request):
+    def test_add_to_basket_button_exists(self, browser):
 
-        lang = request.config.getoption("language")
-        link = f"http://selenium1py.pythonanywhere.com/{lang}/catalogue/coders-at-work_207/"
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         browser.get(link)
 
         #   Cделал таким образом, так как elements возвращают пустой список,
